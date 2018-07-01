@@ -80,38 +80,38 @@ class CaptureSpider(scrapy.Spider):
 * xpath语法
     *  `//div[@class="product-item"]/div[@class="item-img"]/a/@href`
     
-```html
-<div class="product-list-ret-item">
-    <div class="product-item">
-        <div class="item-img">
-            <a href="/chanpin/lanqiu/clothing/2018-03-28/24230.html"><img src="/d/file/chanpin/lanqiu/clothing/2018-03-28/18e504c84409bb41d4eff66a79d216e6.png"></a>
-            <!--<div class="new-products-top"></div>--><!--新品推荐才有-->
-            <!--<div class="new-products-bot"></div>--><!--新品推荐才有-->
-            <a href="/chanpin/lanqiu/clothing/2018-03-28/24230.html" class="more"></a>
-            <a href="/chanpin/lanqiu/clothing/2018-03-28/24230.html" class="good"><i>0</i></a>
-        </div>
-        <div class="item-fot">
-            <p>篮球套</p>
-            <div class="num"><span>ANT2382101</span></div>
-            <div class="price"><i>¥</i><span>159</span></div>
+    ```html
+    <div class="product-list-ret-item">
+        <div class="product-item">
+            <div class="item-img">
+                <a href="/chanpin/lanqiu/clothing/2018-03-28/24230.html"><img src="/d/file/chanpin/lanqiu/clothing/2018-03-28/18e504c84409bb41d4eff66a79d216e6.png"></a>
+                <!--<div class="new-products-top"></div>--><!--新品推荐才有-->
+                <!--<div class="new-products-bot"></div>--><!--新品推荐才有-->
+                <a href="/chanpin/lanqiu/clothing/2018-03-28/24230.html" class="more"></a>
+                <a href="/chanpin/lanqiu/clothing/2018-03-28/24230.html" class="good"><i>0</i></a>
+            </div>
+            <div class="item-fot">
+                <p>篮球套</p>
+                <div class="num"><span>ANT2382101</span></div>
+                <div class="price"><i>¥</i><span>159</span></div>
+            </div>
         </div>
     </div>
-</div>
-```
+    ```
 
     * `//ul[@class="imagebg"]/li/a/img/@src`
     
-```html
-<ul class="imagebg" id="imagebg"> 
-    <li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/800e92ee5a4234a5826613b5349f378f.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/800e92ee5a4234a5826613b5349f378f.png alt=></a></li>&nbsp;<li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/b4db752b497eb5990523a74195b1e5ee.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/b4db752b497eb5990523a74195b1e5ee.png alt=></a></li>&nbsp;<li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/b8a24318d0b1ed82512e471e551c6009.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/b8a24318d0b1ed82512e471e551c6009.png alt=></a></li>&nbsp;<li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/1c4a4e1eaef8f45c8c5ef6685ca6daf6.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/1c4a4e1eaef8f45c8c5ef6685ca6daf6.png alt=></a></li>&nbsp;<li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/04cb96f40506d00fe605220c96ef801b.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/04cb96f40506d00fe605220c96ef801b.png alt=></a></li>
-</ul>
-```
+    ```html
+    <ul class="imagebg" id="imagebg"> 
+        <li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/800e92ee5a4234a5826613b5349f378f.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/800e92ee5a4234a5826613b5349f378f.png alt=></a></li>&nbsp;<li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/b4db752b497eb5990523a74195b1e5ee.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/b4db752b497eb5990523a74195b1e5ee.png alt=></a></li>&nbsp;<li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/b8a24318d0b1ed82512e471e551c6009.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/b8a24318d0b1ed82512e471e551c6009.png alt=></a></li>&nbsp;<li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/1c4a4e1eaef8f45c8c5ef6685ca6daf6.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/1c4a4e1eaef8f45c8c5ef6685ca6daf6.png alt=></a></li>&nbsp;<li data-sPic=/d/file/chanpin/lanqiu/clothing/2018-03-28/04cb96f40506d00fe605220c96ef801b.png><a href="javascript:;" class="bannerbg_main" ><img src=/d/file/chanpin/lanqiu/clothing/2018-03-28/04cb96f40506d00fe605220c96ef801b.png alt=></a></li>
+    </ul>
+    ```
 
-* `//span[@class="qd-tt"]/text()`
+    * `//span[@class="qd-tt"]/text()`
 
-```html
-<span class="qd-tt">ANT2382101</span>
-```
+    ```html
+    <span class="qd-tt">ANT2382101</span>
+    ```
 
 ## 下载图片代码
 * 移除 settings.py 中的注释
