@@ -181,3 +181,7 @@ class QiaodanPipeline(object):
 scrapy crawl capture
 ```
 
+## 参考资料
+* [Scrapy简单入门及实例讲解](https://www.cnblogs.com/kongzhagen/p/6549053.html)
+* [Scrapy爬虫入门教程九 Item Pipeline](https://www.jianshu.com/p/8d65da080c47)
+
