@@ -13,10 +13,15 @@ class QiaodanPipeline(object):
     images_dir = 'images/'
 
     def process_item(self, item, spider):
+        product_number = item['number']
+        dir = self.images_dir + product_number
+        if os.path.exists(dir):
+            return '产品 {} 图片已经下载'.format(product_number)
+
         for (index, img_url) in enumerate(item['img_urls']):
             request = scrapy.Request(img_url)
             dfd = spider.crawler.engine.download(request, spider)
-            dfd.addBoth(self.return_item, item, item['number'], index+1)
+            dfd.addBoth(self.return_item, item, product_number, index+1)
 
         return dfd
 
@@ -29,7 +34,7 @@ class QiaodanPipeline(object):
         _, ext_name = os.path.splitext(basename)
 
         dir = self.images_dir + product_number
-        filename = '{}/{}d{}{}'.format(dir, product_number, image_url_index, ext_name)
+        filename = '{}/{}{}'.format(dir, image_url_index, ext_name)
 
         if not os.path.exists(dir):
             os.makedirs(dir)
