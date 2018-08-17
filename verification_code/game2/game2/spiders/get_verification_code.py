@@ -14,8 +14,7 @@ class GetVerificationCodeSpider(scrapy.Spider):
 
     def start_requests(self):
         for _ in range(self.download_times):
-            yield scrapy.Request(self.verification_code_url,
-                                 dont_filter=True,)
+            yield scrapy.Request(self.verification_code_url, dont_filter=True)
 
     def parse(self, response):
         # if response.status == 200:
